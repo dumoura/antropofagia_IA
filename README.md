@@ -28,4 +28,4 @@ The project draws inspiration from a recent Museum of Modern Art (MAM) exhibitio
 
 We welcome contributions and collaborations from individuals interested in AI, literature, visual arts, and education. Join us in exploring the intersection between technology and the humanities.
 
-For more information and to contribute, please visit our [GitHub repository](https://github.com/your-repository-link).
+For more information and to contribute, please visit our [Repository](https://remixdumoura.com/2023/12/14/multimodalidade-o-artista-em-panico-ia-na-literatura-e-na-arte/).
