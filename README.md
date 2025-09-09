@@ -2,9 +2,8 @@
 
 <img width="750" height="446" alt="Captura de Tela 2025-09-09 às 17 09 46" src="https://github.com/user-attachments/assets/253ecfb9-81d3-445e-893a-6556c6a5458a" />
 
-Acesse o app **[Antropofagia digital](https://remixandoia.streamlit.app/)**
 
-**Antropofagia digital** is part of an ongoing project (IA na Literatura e na Arte) that explores the convergence of artificial intelligence (AI), literature, and visual arts within the context of education and New Literacies. This initiative primarily focuses on the works of Murilo Mendes and Jorge de Lima, two pivotal figures in Brazilian modernist literature and art.
+**[Antropofagia digital](https://remixandoia.streamlit.app/)** is part of an ongoing project (IA na Literatura e na Arte) that explores the convergence of artificial intelligence (AI), literature, and visual arts within the context of education and New Literacies. This initiative primarily focuses on the works of Murilo Mendes and Jorge de Lima, two pivotal figures in Brazilian modernist literature and art.
 
 # IA na Literatura e na Arte (Generative AI, Literary and Art Education)
 
