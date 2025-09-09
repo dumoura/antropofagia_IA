@@ -1,0 +1,24 @@
+[server]
+# Configurações de segurança
+enableXsrfProtection = true
+enableCORS = false
+enableWebsocketCompression = true
+
+# Configurações de performance
+maxUploadSize = 200  # MB
+maxMessageSize = 200  # MB
+
+# Configurações de sessão
+sessionState = true
+
+[theme]
+# Tema personalizado para o projeto
+primaryColor = "#FF6B6B"
+backgroundColor = "#FFFFFF"
+secondaryBackgroundColor = "#F0F2F6"
+textColor = "#262730"
+font = "sans serif"
+
+[browser]
+# Configurações do navegador
+gatherUsageStats = false

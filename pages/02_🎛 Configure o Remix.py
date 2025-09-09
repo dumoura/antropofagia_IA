@@ -27,8 +27,16 @@ def config_page():
         if len(list(PASTA_ARQUIVOS.glob('*.pdf'))) == 0:
             st.error('Adicione arquivos .pdf para inicializar o chatbot')
         else:
-            st.success('Inicializando o ChatBot...')
-            cria_chain_conversa()
-            st.rerun()
+            try:
+                from utils import validate_environment
+                validate_environment()
+                st.success('Inicializando o ChatBot...')
+                if cria_chain_conversa():
+                    st.rerun()
+            except EnvironmentError as e:
+                st.error(f"❌ Erro de configuração: {str(e)}")
+                st.info("💡 Configure a OPENAI_API_KEY nos secrets do Streamlit ou nas variáveis de ambiente")
+            except Exception as e:
+                st.error(f"❌ Erro inesperado: {str(e)}")
             
 config_page()

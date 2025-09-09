@@ -1,7 +1,8 @@
 #streamlit run RemixandoIAs.py --server.enableXsrfProtection false
 import streamlit as st 
 import time
-from utils import cria_chain_conversa, PASTA_ARQUIVOS
+import os
+from utils import cria_chain_conversa, PASTA_ARQUIVOS, validate_environment
 
 
 def sidebar():
@@ -24,13 +25,23 @@ def sidebar():
         if len(list( PASTA_ARQUIVOS.glob('*.pdf'))) == 0:
             st.error('Adicione arquivos .pdf a sua coleção para inicializar o ChatBot')
         else:
-            st.success('Inicializando o Chatbot...')
-            cria_chain_conversa()
-            st.rerun()
+            try:
+                # Valida ambiente antes de inicializar
+                validate_environment()
+                st.success('Inicializando o Chatbot...')
+                if cria_chain_conversa():
+                    st.rerun()
+            except EnvironmentError as e:
+                st.error(f"❌ Erro de configuração: {str(e)}")
+                st.info("💡 Configure a OPENAI_API_KEY nos secrets do Streamlit ou nas variáveis de ambiente")
+            except Exception as e:
+                st.error(f"❌ Erro inesperado: {str(e)}")
             
 
 def chat_window():
     st.header('👩🏾‍💻 Antropofagia digital: Remixando IAs 👩🏾‍💻', divider=True)
+    
+    
     
     if not 'chain' in st.session_state:
         st.error('Alimente seu bot com poemas em .pdf para iniciar!')

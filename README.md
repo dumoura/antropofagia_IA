@@ -24,6 +24,75 @@ The project draws inspiration from a recent Museum of Modern Art (MAM) exhibitio
 2. **Literary Analysis:** Utilize AI to analyze and reinterpret the works of Mendes and de Lima.
 3. **Artistic Creation:** Employ AI tools to create new forms of artistic expression inspired by modernist aesthetics.
 
+## 🚀 Deploy no Streamlit Cloud
+
+### Pré-requisitos
+- Conta no [Streamlit Cloud](https://share.streamlit.io/)
+- Repositório no GitHub com o código
+- Chave da API do OpenAI
+
+### Passos para Deploy
+
+1. **Fork ou clone este repositório**
+   ```bash
+   git clone https://github.com/seu-usuario/antropofagia-ia.git
+   cd antropofagia-ia
+   ```
+
+2. **Configure as variáveis de ambiente**
+   - Acesse seu app no Streamlit Cloud
+   - Vá em Settings > Secrets
+   - Adicione:
+     ```toml
+     OPENAI_API_KEY = "sua-api-key-aqui"
+     ```
+
+3. **Deploy**
+   - Conecte seu repositório ao Streamlit Cloud
+   - Selecione o branch principal
+   - O app será deployado automaticamente
+
+### 🔧 Configuração Local
+
+1. **Instale as dependências**
+   ```bash
+   pip install -r requirements.txt
+   ```
+
+2. **Configure as variáveis de ambiente**
+   ```bash
+   # Crie um arquivo .env
+   echo "OPENAI_API_KEY=sua-api-key-aqui" > .env
+   ```
+
+3. **Execute localmente**
+   ```bash
+   streamlit run RemixandoIAs.py
+   ```
+
+### 🛡️ Segurança
+
+- ✅ API keys protegidas via Streamlit Secrets
+- ✅ Validação de entrada de dados
+- ✅ Tratamento robusto de erros
+- ✅ Arquivos sensíveis no .gitignore
+
+### 📁 Estrutura do Projeto
+
+```
+antropofagia_IA/
+├── .streamlit/           # Configurações do Streamlit
+│   ├── config.toml      # Configuração local
+│   ├── cloud.toml       # Configuração para produção
+│   └── secrets.toml     # Secrets (não commitado)
+├── pages/               # Páginas do Streamlit
+├── arquivos/            # PDFs carregados pelos usuários
+├── RemixandoIAs.py      # App principal
+├── utils.py             # Utilitários e funções
+├── configs.py           # Configurações
+└── requirements.txt     # Dependências
+```
+
 ### Get Involved
 
 We welcome contributions and collaborations from individuals interested in AI, literature, visual arts, and education. Join us in exploring the intersection between technology and the humanities.

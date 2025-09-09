@@ -1,0 +1,30 @@
+# Configuração para Streamlit Cloud
+[server]
+# Configurações de segurança para produção
+enableXsrfProtection = true
+enableCORS = false
+enableWebsocketCompression = true
+
+# Configurações de performance
+maxUploadSize = 200  # MB
+maxMessageSize = 200  # MB
+
+# Configurações de sessão
+sessionState = true
+
+# Configurações de rede
+headless = true
+port = 8501
+address = "0.0.0.0"
+
+[theme]
+# Tema personalizado
+primaryColor = "#FF6B6B"
+backgroundColor = "#FFFFFF"
+secondaryBackgroundColor = "#F0F2F6"
+textColor = "#262730"
+font = "sans serif"
+
+[browser]
+# Configurações do navegador
+gatherUsageStats = false
